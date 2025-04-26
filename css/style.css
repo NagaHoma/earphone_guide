@@ -315,6 +315,13 @@ p {
   right: 16px;
   transform: translateY(-50%);
 }
+.button.nolink {
+  color: #222;
+  background: #e4e4e4;
+}
+.button.nolink:hover {
+  opacity: 1;
+}
 @media screen and (max-width: 640px) {
   .button {
     font-size: 1.25rem;
@@ -573,28 +580,31 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.service-title .title {
+  color: var(--color-violet);
+}
 .service-title-visually-impaired {
   background-image: url(../image/service-title-visually-impaired.jpg);
-  color: var(--color-white);
 }
 .service-title-hearing-impaired {
   background-image: url(../image/service-title-hearing-impaired.jpg);
 }
 .service-title-visually-impaired.service-title {
-  -webkit-text-stroke: 6px #066686;
-  text-stroke: 6px #066686;
+  /* -webkit-text-stroke: 6px #066686;
+  text-stroke: 6px #066686; */
 }
 .service-title-visually-impaired .service-title-text {
-  -webkit-text-stroke: 4px #066686;
-  text-stroke: 4px #066686;
+  /* -webkit-text-stroke: 4px #066686;
+  text-stroke: 4px #066686; */
+
 }
 .service-title-hearing-impaired.service-title {
-  -webkit-text-stroke: 6px #FFF;
-  text-stroke: 6px #FFF;
+  /* -webkit-text-stroke: 6px #FFF;
+  text-stroke: 6px #FFF; */
 }
 .service-title-hearing-impaired .service-title-text {
-  -webkit-text-stroke: 4px #FFF;
-  text-stroke: 4px #FFF;
+  /* -webkit-text-stroke: 4px #FFF;
+  text-stroke: 4px #FFF; */
 }
 @media screen and (max-width: 640px) {
   .service-title {
