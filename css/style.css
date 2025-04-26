@@ -68,15 +68,13 @@ p {
 }
 .grid {
   display: grid;
-  gap: 40px;
+  gap: 24px 40px;
 }
 .grid-auto {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
-@media screen and (max-width: 640px) {
-  .grid {
-    column-gap: 24px;
-  }
+.grid-teaser {
+  row-gap: 40px;
 }
 @media screen and (max-width: 360px) {
   .grid-auto {
@@ -417,7 +415,7 @@ p {
 .link-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px 16px;
+  gap: 16px 40px;
 }
 .link-list-item a {
   color: var(--color-black);
