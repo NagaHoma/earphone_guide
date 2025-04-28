@@ -326,6 +326,8 @@ p {
 .button.nolink {
   color: #222;
   background: #e4e4e4;
+  font-size: 1.2rem;
+    line-height: 1.1;
 }
 .button.nolink:hover {
   opacity: 1;
@@ -643,7 +645,7 @@ p {
 @media screen and (max-width: 1024px) {
   .mv {
     height: 380px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
     url(../image/mv-sp.jpg);
     background-size: cover;
     background-position: top 10% center;
