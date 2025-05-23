@@ -1,0 +1,213 @@
+
+/* MV */
+.mv {
+  height: 450px;
+  background-image: url(../image/mv.jpg);
+  background-size: 1920px 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+}
+.mv-title-wrap {
+  height: 100%;
+  justify-content: center;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.mv-title {
+  font-size: 4rem;
+}
+.mv-subtitle {
+  font-size: 1.75rem;
+}
+.mv-link-box {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: fit-content;
+  border: 3px solid var(--color-pink);
+}
+.mv-link-box a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+.mv-link-box-ribbon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-pink);
+  width: 50px;
+  height: 50px;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+.mv-link-box-ribbon-text {
+  color: var(--color-white);
+  font-size: 0.75rem;
+  display: block;
+  transform: rotate(-45deg) translate(2px, 8px);
+  transform-origin: bottom right;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.mv-link-box a:hover {
+  background-color: var(--color-pink);
+}
+
+@media screen and (min-width: 1920px) {
+  .mv {
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mv {
+    height: 380px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+    url(../image/mv-sp.jpg);
+    background-size: cover;
+    background-position: top 10% center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mv-title-wrap {
+    height: auto;
+    padding-top: 84px;
+  }
+  .mv-title {
+    font-size: 2.625rem;
+  }
+  .mv-subtitle {
+    font-size: 1.25rem;
+  }
+  .mv-link-box {
+    width: calc(100% - 40px);
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 24px;
+  }
+  .mv-link-box a {
+    font-size: 1rem;
+    padding: 16px;
+  }
+  .mv-link-box br {
+    display: none;
+  }
+  .mv-link-box-ribbon {
+    display: none;
+  }
+}
+
+/* service */
+.service-title {
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 72px 0 24px;
+  paint-order: stroke;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.service-title .title {
+  color: var(--color-violet);
+}
+.service-title-visually-impaired {
+  background-image: url(../image/service-title-visually-impaired.jpg);
+}
+.service-title-hearing-impaired {
+  background-image: url(../image/service-title-hearing-impaired.jpg);
+}
+.service-title-visually-impaired.service-title {
+  /* -webkit-text-stroke: 6px #066686;
+  text-stroke: 6px #066686; */
+}
+.service-title-visually-impaired .service-title-text {
+  /* -webkit-text-stroke: 4px #066686;
+  text-stroke: 4px #066686; */
+
+}
+.service-title-hearing-impaired.service-title {
+  /* -webkit-text-stroke: 6px #FFF;
+  text-stroke: 6px #FFF; */
+}
+.service-title-hearing-impaired .service-title-text {
+  /* -webkit-text-stroke: 4px #FFF;
+  text-stroke: 4px #FFF; */
+}
+@media screen and (max-width: 640px) {
+  .service-title {
+    height: auto;
+    padding: 24px 16px 16px;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+}
+
+.service-grid-item-title {
+  color: var(--color-violet);
+  font-size: 1.5rem;
+  position: relative;
+}
+.service-grid-item-title::before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-violet);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.service-grid-item-title span {
+  background-color: var(--color-white);
+  z-index: 1;
+  padding: 0 16px;
+}
+@media screen and (max-width: 640px) {
+  .service-grid-item-title {
+    font-size: 1.25rem;
+  }
+}
+
+.service-guide-img {
+  background-color: var(--color-gray);
+  aspect-ratio: 4/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.service-guide-img img {
+  object-fit: contain;
+}
+.service-guide-img-visually-impaired img {
+  width: calc(100% / 3);
+}
+.service-guide-img-hearing-impaired img {
+  width: 70%;
+}
+@media screen and (max-width: 640px) {
+  .service-guide-img {
+    aspect-ratio: auto;
+    height: 180px;
+  }
+  .service-guide-img-visually-impaired img {
+    width: 90px;
+  }
+  .service-guide-img-hearing-impaired img {
+    width: 180px;
+  }
+}
