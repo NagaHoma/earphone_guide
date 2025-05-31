@@ -7,6 +7,7 @@
   --color-gray: #F5F5F5;
   --color-gold: #EAD07A;
   --color-gold-dark: #D6B445;
+  --color-gold-deep-dark: #A3841D;
   --color-organizer-light: #B6DEB7;
   --color-organizer-dark: #006703;
   --color-explain-light: #85B1DF;
@@ -26,12 +27,14 @@ html {
 }
 
 body {
-  line-height: 1.4;
-  color: var(--color-black);
   container-type: inline-size;
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+}
+p {
+  line-height: 1.5;
 }
 
 a, button {
@@ -150,6 +153,9 @@ p {
   max-width: 1104px;
   margin: 120px auto;
 }
+.content-wrap-small {
+  margin-top: 64px;
+}
 @media screen and (max-width: 1144px) {
   .content-wrap {
     padding-left: 20px;
@@ -159,6 +165,9 @@ p {
 @media screen and (max-width: 640px) {
   .content-wrap {
     margin: 64px auto;
+  }
+  .content-wrap-small {
+    margin-top: 24px;
   }
 }
 
@@ -752,5 +761,195 @@ p {
   }
   .page-top {
     display: none;
+  }
+}
+
+/* page-title */
+.page-title-wrap {
+  background-color: #FCFAF5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-weight: 700;
+  height: 200px;
+}
+.page-title {
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1.2;
+}
+.page-title-en {
+  font-size: 1.5rem;
+  color: var(--color-gold-deep-dark);
+  line-height: 1.4;
+}
+@media screen and (max-width: 640px) {
+  .page-title-wrap {
+    gap: 8px;
+    height: 140px;
+  }
+  .page-title {
+    font-size: 2.25rem;
+  }
+  .page-title-en {
+    font-size: 1rem;
+  }
+}
+
+/* breadcrumb */
+.breadcrumb {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+}
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  color: #888;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.breadcrumb li:not(:last-child)::after {
+  content: '\e5cc';
+  font-family: 'Material Icons';
+  font-size: 1.75rem;
+  line-height: 1;
+}
+.breadcrumb a {
+  color: var(--color-black);
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 640px) {
+  .breadcrumb {
+    padding: 4px 20px;
+  }
+  .breadcrumb li {
+    font-size: 0.75rem;
+  }
+  .breadcrumb li:not(:last-child)::after {
+    font-size: 1.25rem;
+  }
+}
+
+/* news */
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px dotted #CCC;
+}
+.news-item:last-child {
+  border-bottom: none;
+}
+.news-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.news-date {
+  font-size: 1.5rem;
+}
+.news-tag {
+  font-size: 1.125rem;
+  padding: 2px 0;
+  white-space: nowrap;
+  width: 160px;
+  text-align: center;
+  border-radius: 2px;
+}
+.tag-explain {
+  background-color: var(--color-explain-light);
+  color: var(--color-explain-dark);
+}
+.tag-support {
+  background-color: var(--color-support-light);
+  color: var(--color-support-dark);
+}
+.tag-language {
+  background-color: var(--color-language-light);
+  color: var(--color-language-dark);
+}
+.news-text {
+  font-size: 1.5rem;
+}
+.news-text a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 767px) {
+  .news-item {
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: flex-start;
+  }
+  .news-date {
+    font-size: 1rem;
+  }
+  .news-tag {
+    font-size: 0.875rem;
+    width: 120px;
+  }
+  .news-text {
+    font-size: 1.25rem;
+  }
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.pagination-button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.pagination-prev {
+  margin-right: 16px;
+}
+.pagination-prev::after {
+  content: '\e5cb';
+  font-family: 'Material Icons';
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+.pagination-next {
+  margin-left: 16px;
+}
+.pagination-next::after {
+  content: '\e5cc';
+  font-family: 'Material Icons';
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+.pagination-button:disabled,
+.pagination-button:disabled::after {
+  pointer-events: none;
+  cursor: default;
+}
+.pagination-current {
+  font-weight: 700;
+  color: var(--color-black);
+}
+.pagination-ellipsis {
+  font-size: 1rem;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+@media screen and (max-width: 374px) {
+  .pagination {
+    gap: 16px;
+  }
+  .pagination-prev {
+    margin-right: 8px;
+  }
+  .pagination-next {
+    margin-left: 8px;
   }
 }
