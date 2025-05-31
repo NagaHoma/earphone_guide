@@ -2,7 +2,7 @@
 /* MV */
 .mv {
   height: 450px;
-  background-image: url(../image/mv.jpg);
+  background-image: url(/image/barrerfree/mv.jpg);
   background-size: 1920px 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@
   bottom: 40px;
   right: 40px;
   width: fit-content;
-  border: 3px solid var(--color-pink);
+  border: 3px solid var(--color-support-light);
 }
 .mv-link-box a {
   display: block;
@@ -41,27 +41,8 @@
   font-size: 1.25rem;
   font-weight: normal;
 }
-.mv-link-box-ribbon {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: var(--color-pink);
-  width: 50px;
-  height: 50px;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
-}
-.mv-link-box-ribbon-text {
-  color: var(--color-white);
-  font-size: 0.75rem;
-  display: block;
-  transform: rotate(-45deg) translate(2px, 8px);
-  transform-origin: bottom right;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
 .mv-link-box a:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-support-light);
 }
 
 @media screen and (min-width: 1920px) {
@@ -121,7 +102,7 @@
   background-size: cover;
 }
 .service-title .title {
-  color: var(--color-violet);
+  color: var(--color-support-dark);
 }
 .service-title-visually-impaired {
   background-image: url(../image/service-title-visually-impaired.jpg);
@@ -156,7 +137,7 @@
 }
 
 .service-grid-item-title {
-  color: var(--color-violet);
+  color: var(--color-support-dark);
   font-size: 1.5rem;
   position: relative;
 }
@@ -165,7 +146,7 @@
   display: block;
   height: 1px;
   width: 100%;
-  background-color: var(--color-violet);
+  background-color: var(--color-support-dark);
   position: absolute;
   top: 50%;
   left: 50%;
