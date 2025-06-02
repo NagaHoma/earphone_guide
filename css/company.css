@@ -1,0 +1,120 @@
+.company-tab-list {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--color-border);
+  gap: 16px;
+  padding-bottom: 2px;
+}
+.company-tab-item {
+  font-size: 1.5rem;
+}
+.company-tab-item a {
+  display: block;
+  padding: 8px 12px;
+}
+.company-tab-item.is-current {
+  font-weight: 700;
+  color: var(--color-gold-deep-dark);
+  position: relative;
+  padding: 8px 12px;
+}
+.company-tab-item.is-current::after {
+  content: "";
+  display: block;
+  background-color: var(--color-gold-deep-dark);
+  width: 63.5%;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+.company-tab-item a:hover {
+  font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .company-tab-item {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .company-tab-list {
+    gap: 0;
+  }
+  .company-tab-item {
+    font-size: 0.75rem;
+  }
+  .company-tab-item.is-current::after {
+    width: 100%;
+  }
+}
+
+.company-history-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.company-history-list li {
+  display: flex;
+  align-items: center;
+  gap: 16px 40px;
+}
+.company-history-year {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.company-history-year-large {
+  font-size: 2rem;
+  line-height: 1.4;
+  color: var(--color-gold-deep-dark);
+  font-weight: 700;
+}
+.company-history-year-small {
+  font-size: 0.75rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.company-history-contents-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.company-history-month {
+  width: 46px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+.company-history-text {
+  padding-left: 24px;
+  border-left: 1px solid var(--color-border);
+  line-height: 1.8;
+  font-weight: 400;
+}
+@media screen and (max-width: 767px) {
+  .company-history-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .company-history-year {
+    align-self: center;
+  }
+  .company-history-year-large {
+    font-size: 1.75rem;
+  }
+  .company-history-contents-item {
+    gap: 16px;
+  }
+  .company-history-month {
+    font-size: 1rem;
+  }
+  .company-history-text {
+    font-size: 0.875rem;
+    padding-left: 16px;
+  }
+}

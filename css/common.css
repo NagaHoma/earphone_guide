@@ -16,6 +16,7 @@
   --color-support-dark: #860031;
   --color-language-light: #B6BBDE;
   --color-language-dark: #001080;
+  --color-border: #CCC
 }
 
 * {
@@ -60,11 +61,11 @@ p {
   display: none;
 }
 .pc-only {
-  display: block;
+  display: inline-block;
 }
 @media screen and (max-width: 640px) {
   .sp-only {
-    display: block;
+    display: inline-block;
   }
   .pc-only {
     display: none;
@@ -609,6 +610,7 @@ p {
   top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
+  border-radius: 3px;
 }
 .header-contact-button-wrap {
   height: 100%;
@@ -843,7 +845,7 @@ p {
   align-items: flex-start;
   gap: 24px;
   padding: 16px 0;
-  border-bottom: 1px dotted #CCC;
+  border-bottom: 1px dotted var(--color-border);
 }
 .news-item:last-child {
   border-bottom: none;
