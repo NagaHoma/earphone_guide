@@ -254,6 +254,7 @@ p {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 700;
   font-style: normal;
+  line-height: 1.4;
 }
 
 .title-align-left {
@@ -269,6 +270,12 @@ p {
   width: 100cqi;
   background-color: var(--color-support-dark);
   margin-top: 40px;
+}
+.title-gold {
+  color: var(--color-gold-deep-dark);
+}
+.title-gold::after {
+  background-color: var(--color-gold-deep-dark);
 }
 .title-medium {
   font-size: 2rem;
@@ -370,6 +377,12 @@ p {
 .button-gold:hover {
   opacity: 1;
   background-color: var(--color-gold-dark);
+}
+.button-deep-gold {
+  background-color: var(--color-gold-deep-dark);
+  color: var(--color-white);
+  font-size: 1.25rem;
+  height: 46px;
 }
 .button-blank {
   position: relative;
