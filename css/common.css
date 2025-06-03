@@ -262,20 +262,20 @@ p {
 }
 .title-large {
   font-size: 3rem;
-  color: var(--color-support-dark);
+  color: var(--color-gold-deep-dark);
 }
 .title-large::after {
   content: '';
   height: 3px;
   width: 100cqi;
-  background-color: var(--color-support-dark);
+  background-color: var(--color-gold-deep-dark);
   margin-top: 40px;
 }
-.title-gold {
-  color: var(--color-gold-deep-dark);
+.title-support {
+  color: var(--color-support-dark);
 }
-.title-gold::after {
-  background-color: var(--color-gold-deep-dark);
+.title-support::after {
+  background-color: var(--color-support-dark);
 }
 .title-medium {
   font-size: 2rem;
@@ -300,6 +300,9 @@ p {
   display: block;
   height: calc(1em + 10px);
   width: 3px;
+  background-color: var(--color-gold-deep-dark);
+}
+.title-left-bar-support::before {
   background-color: var(--color-support-dark);
 }
 @media screen and (max-width: 640px) {
@@ -345,20 +348,27 @@ p {
   gap: 24px 40px;
   flex-wrap: wrap;
 }
-.button-secondary {
+.button-small {
+  max-width: 240px;
+  font-size: 1.25rem;
+  color: var(--color-black);
+  border: 2px solid var(--color-black);
+  height: 46px;
+}
+.button-more {
   background-color: var(--color-black);
   border-radius: 4px;
   max-width: 240px;
   font-size: 1.25rem;
   height: 40px;
 }
-.button-secondary:hover {
+.button-more:hover {
   color: var(--color-black);
   border: 2px solid var(--color-black);
   background-color: var(--color-white);
   opacity: 1;
 }
-.button-secondary-reverse {
+.button-more.reverse {
   color: var(--color-black);
   border: 2px solid var(--color-black);
   background-color: var(--color-white);
@@ -383,6 +393,11 @@ p {
   color: var(--color-white);
   font-size: 1.25rem;
   height: 46px;
+}
+.button-deep-gold.reverse {
+  background-color: var(--color-white);
+  color: var(--color-gold-deep-dark);
+  border: 2px solid var(--color-gold-deep-dark);
 }
 .button-blank {
   position: relative;
@@ -411,6 +426,9 @@ p {
   right: 8px;
   transform: translateY(-50%);
 }
+.button-small.button-with-arrow {
+  justify-content: center;
+}
 .button.nolink {
   color: #222;
   background: #e4e4e4;
@@ -430,7 +448,7 @@ p {
   .button {
     font-size: 1.25rem;
   }
-  .button-secondary {
+  .button-more {
     font-size: 1rem;
   }
 }
@@ -789,6 +807,7 @@ p {
   gap: 16px;
   font-weight: 700;
   height: 200px;
+  padding: 0 20px;
 }
 .page-title {
   font-size: 3rem;

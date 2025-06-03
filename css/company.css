@@ -1,4 +1,5 @@
-.earphone-guide {
+.guide-history,
+.recruit {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
 }
@@ -145,5 +146,47 @@
 @media screen and (max-width: 640px) {
   .teaser-company .teaser-horizon-img {
     max-width: none;
+  }
+}
+
+.recruit-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+.recruit-item a:hover {
+  opacity: 0.7;
+}
+.recruit-item-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  margin-top: 16px;
+}
+.recruit-item-detail {
+  margin-top: 8px;
+}
+@media screen and (max-width: 640px) {
+  .recruit-list {
+    gap: 24px;
+  }
+}
+
+.page-title-recruit-detail {
+  font-size: 2.5rem;
+  text-align: left;
+}
+.page-title-recruit-detail-sub {
+  font-size: 1.5rem;
+  display: block;
+  margin-top: 24px;
+}
+@media screen and (max-width: 640px) {
+  .page-title-recruit-detail {
+    font-size: 1.5rem;
+  }
+  .page-title-recruit-detail-sub {
+    font-size: 1rem;
+    margin-top: 8px;
   }
 }

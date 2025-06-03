@@ -1,8 +1,11 @@
-const pageSize = 10;
+
+const list = document.getElementById('paginationList');
+const page = list.dataset.page;
+const isRecruit = page === 'recruit'
+const pageSize = isRecruit ? 9 : 10;
 let currentPage = 1;
 
-const newsList = document.getElementById('newsList');
-const allItems = Array.from(newsList.querySelectorAll('.news-item'));
+const allItems = Array.from(list.querySelectorAll('.js-pagination-item'));
 const paginationControls = document.getElementById('pagination');
 
 const renderPage = (page) => {
