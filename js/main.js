@@ -17,9 +17,21 @@ const handleCurrentPage = () => {
   });
 }
 
+const toggleHeaderMenu = () => {
+  const header = document.getElementById('header');
+  header.classList.toggle('is-open');
+  document.body.classList.toggle('is-fixed')
+}
+
 const init = async () => {
   await loadInclude('header', '/components/header.html');
   handleCurrentPage();
+  const hamburgerIcon = document.querySelector('.js-toggle-header-menu');
+  if(hamburgerIcon) {
+    hamburgerIcon.addEventListener('click', () => {
+      toggleHeaderMenu()
+    })
+  }
 
   await loadInclude('footer', '/components/footer.html');
 };
