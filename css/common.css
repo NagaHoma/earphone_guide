@@ -222,6 +222,14 @@ p {
 .line-height-large {
   line-height: 1.8;
 }
+.font-noto {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+.font-rounded {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 500;
+}
 
 @media screen and (max-width: 640px) {
   .text-small {
@@ -943,6 +951,10 @@ p {
   cursor: pointer;
   font-size: 1.5rem;
   font-weight: 400;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
 }
 .pagination-prev {
   margin-right: 16px;
@@ -952,6 +964,7 @@ p {
   font-family: 'Material Icons';
   font-size: 1.75rem;
   cursor: pointer;
+  padding-top: 2px;
 }
 .pagination-next {
   margin-left: 16px;
@@ -961,6 +974,7 @@ p {
   font-family: 'Material Icons';
   font-size: 1.75rem;
   cursor: pointer;
+  padding-top: 2px;
 }
 .pagination-button:disabled,
 .pagination-button:disabled::after {
