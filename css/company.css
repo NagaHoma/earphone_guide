@@ -167,22 +167,3 @@
     gap: 24px;
   }
 }
-
-.page-title-recruit-detail {
-  font-size: 2.5rem;
-  text-align: left;
-}
-.page-title-recruit-detail-sub {
-  font-size: 1.5rem;
-  display: block;
-  margin-top: 24px;
-}
-@media screen and (max-width: 640px) {
-  .page-title-recruit-detail {
-    font-size: 1.5rem;
-  }
-  .page-title-recruit-detail-sub {
-    font-size: 1rem;
-    margin-top: 8px;
-  }
-}
