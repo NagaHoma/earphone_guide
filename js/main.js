@@ -17,10 +17,13 @@ const handleCurrentPage = () => {
   });
 }
 
-const toggleHeaderMenu = () => {
+const toggleHeaderMenu = (target) => {
   const header = document.getElementById('header');
   header.classList.toggle('is-open');
-  document.body.classList.toggle('is-fixed')
+  document.body.classList.toggle('is-fixed');
+
+  const isOpen = header.classList.contains('is-open');
+  target.textContent = isOpen ? 'close' : 'menu';
 }
 
 const init = async () => {
@@ -28,8 +31,8 @@ const init = async () => {
   handleCurrentPage();
   const hamburgerIcon = document.querySelector('.js-toggle-header-menu');
   if(hamburgerIcon) {
-    hamburgerIcon.addEventListener('click', () => {
-      toggleHeaderMenu()
+    hamburgerIcon.addEventListener('click', (e) => {
+      toggleHeaderMenu(e.target)
     })
   }
 
