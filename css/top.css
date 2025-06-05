@@ -271,7 +271,7 @@ p {
     height: 100%;
     position: absolute;
   }
-  .contents-link-button a {
+  .contents-link-button a.button-more {
     background-color: transparent;
     width: 100%;
     height: 100%;

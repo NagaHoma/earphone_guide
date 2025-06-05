@@ -75,6 +75,13 @@ p {
     display: none;
   }
 }
+@media screen and (max-width: 1144px) {
+  .sp-full-screen {
+    width: 100cqi;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
 
 /* grid/flex */
 .flex {
@@ -163,6 +170,8 @@ p {
 }
 @media screen and (max-width: 1144px) {
   .content-wrap {
+    width: 100%;
+    max-width: none;
     padding-left: 20px;
     padding-right: 20px;
   }
