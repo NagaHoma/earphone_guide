@@ -1,0 +1,113 @@
+.contact-list {
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  row-gap: 40px;
+}
+.contact-item {
+  background-color: var(--color-gray);
+  padding: 16px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+.contact-item-title {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.contact-item.green .contact-item-title {
+  color: var(--color-organizer-dark);
+}
+.contact-item.blue .contact-item-title {
+  color: var(--color-blue);
+}
+.contact-item.yellow .contact-item-title {
+  color: var(--color-yellow);
+}
+.contact-item.green .button {
+  background-color: var(--color-organizer-dark);
+}
+.contact-item.blue .button {
+  background-color: var(--color-blue);
+}
+.contact-item.yellow .button {
+  background-color: var(--color-yellow);
+}
+.contact-item-title-sub {
+  font-size: 1.25rem;
+  color: var(--color-black);
+  font-weight: 700;
+  display: block;
+}
+@media screen and (max-width: 1144px) {
+  .contact-list {
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .contact-list {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-item {
+    padding: 16px;
+  }
+  .contact-item-title {
+    font-size: 1.5rem;
+  }
+  .contact-item-title-sub {
+    font-size: 1rem;
+  }
+  .contact-item .button {
+    height: 46px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .contact-item .button-with-arrow {
+    font-size: 1.5rem;
+  }
+  .contact-item .button-with-arrow::after {
+    font-size: 1.75rem;
+  }
+}
+
+.qa-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+.qa-list li + li {
+  border-top: 1px solid var(--color-border);
+}
+.q-text {
+  font-size: 1.25rem;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.q-text:before {
+  content: "Q. ";
+  color: var(--color-gold-deep-dark);
+}
+.a-text:before {
+  content: "A. ";
+  color: var(--color-yellow);
+  font-weight: 700;
+}
+.qa-list .button-small {
+  max-width: none;
+  min-width: 240px;
+  width: fit-content;
+  padding: 0 40px;
+}
+@media screen and (max-width: 640px) {
+  .qa-list li {
+    padding: 16px 0;
+  }
+  .q-text {
+    font-size: 1.125rem;
+  }
+}
