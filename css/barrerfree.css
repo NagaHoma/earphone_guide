@@ -184,7 +184,7 @@
   object-fit: contain;
 }
 .service-guide-img-visually-impaired img {
-  width: calc(100% / 3);
+  width: calc(100% / 2);
 }
 .service-guide-img-hearing-impaired img {
   width: 70%;
