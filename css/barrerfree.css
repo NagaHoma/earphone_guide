@@ -8,31 +8,7 @@
   line-height: 1.8;
 }
 
-/* MV */
-.mv {
-  height: 450px;
-  background-image: url(/image/barrerfree/mv.jpg);
-  background-size: 1920px 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: var(--color-white);
-  text-align: center;
-  font-weight: bold;
-  position: relative;
-}
-.mv-title-wrap {
-  height: 100%;
-  justify-content: center;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-.mv-title {
-  font-size: 4rem;
-}
-.mv-subtitle {
-  font-size: 1.75rem;
-}
+/* mv-link-box */
 .mv-link-box {
   position: absolute;
   bottom: 40px;
@@ -54,31 +30,7 @@
   background-color: var(--color-support-light);
 }
 
-@media screen and (min-width: 1920px) {
-  .mv {
-    background-size: cover;
-  }
-}
 @media screen and (max-width: 1024px) {
-  .mv {
-    height: 380px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
-    url(/image/barrerfree/mv-sp.jpg);
-    background-size: cover;
-    background-position: top 10% center;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .mv-title-wrap {
-    height: auto;
-    padding-top: 84px;
-  }
-  .mv-title {
-    font-size: 2.625rem;
-  }
-  .mv-subtitle {
-    font-size: 1.25rem;
-  }
   .mv-link-box {
     width: calc(100% - 40px);
     right: 50%;

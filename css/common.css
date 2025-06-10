@@ -431,17 +431,26 @@ p {
   color: var(--color-gold-deep-dark);
   border: 2px solid var(--color-gold-deep-dark);
 }
-.button-blank {
+.button-blank,
+.button-pdf {
   position: relative;
 }
-.button-blank::after {
-  content: '\e89e';
-  font-family: 'Material Icons';
+.button-blank::after,
+.button-pdf::after {
+  font-family: 'Material Symbols Outlined';
+  content: 'picture_as_pdf';
   font-size: 1.5rem;
   position: absolute;
   top: 50%;
   right: 16px;
   transform: translateY(-50%);
+  font-weight: 400;
+}
+.button-blank::after {
+  content: '\e89e';
+}
+.button-pdf::after {
+  content: '\e415';
 }
 .button-with-arrow {
   padding: 0 24px;
@@ -449,8 +458,8 @@ p {
   font-size: 1.25rem;
 }
 .button-with-arrow::after {
-  content: '\e5cc';
-  font-family: 'Material Icons';
+  content: 'chevron_right';
+  font-family: 'Material Symbols Outlined';
   font-size: 1.75rem;
   position: absolute;
   top: 50%;
@@ -472,8 +481,14 @@ p {
   outline: none;
   padding: 0;
 }
+.button-outline {
+  border: 2px solid var(--color-black);
+  color: var(--color-black);
+  font-size: 1.5rem;
+}
 @media screen and (max-width: 640px) {
-  .button {
+  .button,
+  .button-outline {
     font-size: 1.25rem;
   }
   .button-more,
@@ -574,8 +589,8 @@ p {
   line-height: 1.8;
 }
 .link-list-item a::after {
-  content: '\e5cc';
-  font-family: 'Material Icons';
+  content: 'chevron_right';
+  font-family: 'Material Symbols Outlined';
   font-size: 1.75rem;
 }
 .link-list-item a span {
@@ -876,6 +891,98 @@ p {
   }
 }
 
+/* MV */
+.mv {
+  height: 450px;
+  background-image: url(/image/barrerfree/mv.jpg);
+  background-size: 1920px 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  line-height: 1.2;
+}
+.mv-title-wrap {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.mv-title {
+  font-size: 4rem;
+}
+.mv-subtitle {
+  font-size: 1.75rem;
+}
+.mv-link-box {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: fit-content;
+  border: 3px solid var(--color-support-light);
+}
+.mv-link-box a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+.mv-link-box a:hover {
+  background-color: var(--color-support-light);
+}
+
+@media screen and (min-width: 1920px) {
+  .mv {
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mv {
+    height: 380px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+    url(/image/barrerfree/mv-sp.jpg);
+    background-size: cover;
+    background-position: top 10% center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mv-title-wrap {
+    height: auto;
+    padding-top: 84px;
+  }
+  .mv-title {
+    font-size: 2.625rem;
+  }
+  .mv-subtitle {
+    font-size: 1.25rem;
+  }
+  .mv-link-box {
+    width: calc(100% - 40px);
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 24px;
+  }
+  .mv-link-box a {
+    font-size: 1rem;
+    padding: 16px;
+  }
+  .mv-link-box br {
+    display: none;
+  }
+  .mv-link-box-ribbon {
+    display: none;
+  }
+}
+
 /* page-title */
 .page-title-wrap {
   background-color: #FCFAF5;
@@ -969,8 +1076,8 @@ p {
   white-space: nowrap;
 }
 .breadcrumb li:not(:last-child)::after {
-  content: '\e5cc';
-  font-family: 'Material Icons';
+  content: 'chevron_right';
+  font-family: 'Material Symbols Outlined';
   font-size: 1.75rem;
   line-height: 1;
 }
@@ -1081,8 +1188,8 @@ p {
   margin-right: 16px;
 }
 .pagination-prev::after {
-  content: '\e5cb';
-  font-family: 'Material Icons';
+  content: 'chevron_left';
+  font-family: 'Material Symbols Outlined';
   font-size: 1.75rem;
   cursor: pointer;
   padding-top: 2px;
@@ -1091,8 +1198,8 @@ p {
   margin-left: 16px;
 }
 .pagination-next::after {
-  content: '\e5cc';
-  font-family: 'Material Icons';
+  content: 'chevron_right';
+  font-family: 'Material Symbols Outlined';
   font-size: 1.75rem;
   cursor: pointer;
   padding-top: 2px;
@@ -1120,5 +1227,39 @@ p {
   }
   .pagination-next {
     margin-left: 8px;
+  }
+}
+
+/* レスポンシブカレンダーのコンテナ */
+.responsive-calendar-container {
+  position: relative;
+  /* ここでアスペクト比を定義します。高さが幅の75%になるように設定。 */
+  padding-bottom: 75%; /* (height / width) * 100% = (600 / 800) * 100% = 75% */
+  height: 0; /* padding-bottomで高さを確保するため、heightは0に設定 */
+  overflow: hidden; /* 子要素がはみ出さないようにクリップ */
+  max-width: 100%; /* 親要素は最大で画面幅いっぱいまで広がるように設定 */
+  margin: 20px auto; /* カレンダーを中央寄せにし、上下に余白を設定 */
+  border: 1px solid #ddd; /* 境界線を追加して見やすくする */
+  border-radius: 8px; /* 角を丸くする */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 軽い影を追加 */
+}
+
+/* 埋め込まれるGoogleカレンダーのiframe自体 */
+.responsive-calendar-container iframe {
+  position: absolute; /* 親要素（.responsive-calendar-container）を基準に配置 */
+  top: 0;
+  left: 0;
+  width: 100%; /* 親要素の幅に合わせて100%に拡大 */
+  height: 100%; /* 親要素の高さに合わせて100%に拡大 */
+}
+
+/* スマートフォン向けに、カレンダーのアスペクト比を調整したい場合のメディアクエリ */
+@media (max-width: 768px) { /* 画面幅が768px以下のデバイスに適用 */
+  .responsive-calendar-container {
+    /* 例: スマートフォンでは、カレンダーをより正方形に近づけたい場合（1:1の比率） */
+    padding-bottom: 100%; /* (高さ / 幅) * 100% = (1 / 1) * 100% = 100% */
+    /* もし、常に固定の高さが必要な場合は、padding-bottomを削除してheightを指定することもできますが、
+        その場合はスクロールが必要になる可能性があります。 */
+    /* height: 400px; */
   }
 }
