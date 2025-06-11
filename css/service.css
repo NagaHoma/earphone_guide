@@ -11,6 +11,14 @@
 .overview-grid img {
   border: 1px solid var(--color-border);
 }
+@media screen and (max-width: 640px) {
+  .overview-title {
+    font-size: 1.25rem;
+  }
+  .overview-title-sub {
+    font-size: 0.875rem;
+  }
+}
 
 .section-title {
   font-family: "M PLUS Rounded 1c", sans-serif;
@@ -28,6 +36,23 @@
 .title-support {
   color: var(--color-support-dark);
 }
+@media screen and (max-width: 640px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  .section-title-sub {
+    font-size: 1rem;
+  }
+}
+
+.section-text {
+  text-align: center;
+}
+@media screen and (max-width: 640px) {
+  .section-text {
+    text-align: left;
+  }
+}
 
 .service-button-wrap {
   gap: 24px;
@@ -44,4 +69,9 @@
 .service-button-text-small {
   font-size: 0.75rem;
   margin-bottom: 2px;
+}
+@media screen and (max-width: 640px) {
+  .service-button {
+    font-size: 1rem;
+  }
 }

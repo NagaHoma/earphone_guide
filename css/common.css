@@ -133,6 +133,11 @@ p {
   row-gap: 64px;
 }
 @media screen and (max-width: 640px) {
+  .sp-gap0 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+  }
   .sp-gap8 {
     display: flex;
     flex-direction: column;
@@ -231,6 +236,9 @@ p {
 }
 .text-large {
   font-size: 1.25rem;
+}
+.text-nowrap {
+  white-space: nowrap;
 }
 .line-height-large {
   line-height: 1.8;
