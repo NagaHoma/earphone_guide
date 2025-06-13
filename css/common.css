@@ -239,6 +239,7 @@ p {
 }
 .text-nowrap {
   white-space: nowrap;
+  display: contents;
 }
 .line-height-large {
   line-height: 1.8;
@@ -382,6 +383,8 @@ p {
   color: var(--color-white);
   text-decoration: none;
   height: 52px;
+  border: none;
+  background-color: transparent;
   border-radius: 9999px;
   width: 100%;
   max-width: 320px;
@@ -389,6 +392,7 @@ p {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 700;
   font-style: normal;
+  cursor: pointer;
 }
 .button-text-small {
   display: contents;
@@ -458,13 +462,14 @@ p {
   border: 2px solid var(--color-gold-deep-dark);
 }
 .button-blank,
-.button-pdf {
+.button-pdf,
+.button-audio {
   position: relative;
 }
 .button-blank::after,
-.button-pdf::after {
+.button-pdf::after,
+.button-audio::after {
   font-family: 'Material Symbols Outlined';
-  content: 'picture_as_pdf';
   font-size: 1.5rem;
   position: absolute;
   top: 50%;
@@ -473,10 +478,13 @@ p {
   font-weight: 400;
 }
 .button-blank::after {
-  content: '\e89e';
+  content: 'open_in_new';
 }
 .button-pdf::after {
-  content: '\e415';
+  content: 'picture_as_pdf';
+}
+.button-audio::after {
+  content: 'hearing';
 }
 .button-with-arrow {
   padding: 0 24px;
@@ -959,6 +967,9 @@ p {
 .mv-language {
   background-image: url(/image/language/mv.jpg);
 }
+.mv-explain {
+  background-image: url(/image/explain/mv.jpg);
+}
 .mv-title-wrap {
   display: flex;
   height: 100%;
@@ -1005,6 +1016,9 @@ p {
     height: 380px;
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .mv-explain {
+    height: 240px;
   }
   .mv-barrerfree {
     background-image: url(/image/barrerfree/mv-sp.jpg);

@@ -1,3 +1,12 @@
+.xs-only {
+  display: none;
+}
+@media screen and (max-width: 350px) {
+  .xs-only {
+    display: block;
+  }
+}
+
 .overview-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -8,7 +17,7 @@
   display: block;
   font-size: 1.5rem;
 }
-.overview-grid img {
+.overview-grid li:not(:nth-child(2)) img {
   border: 1px solid var(--color-border);
 }
 @media screen and (max-width: 640px) {
@@ -56,6 +65,7 @@
   text-align: center;
 }
 .section-text-language {
+  font-weight: 400;
   color: var(--color-language-dark);
 }
 @media screen and (max-width: 640px) {
@@ -115,15 +125,196 @@
   }
 }
 
-.language-app-image {
-  text-align: center;
-}
-.language-app-image img {
+.app-image img {
   width: 160px;
   aspect-ratio: 1 / 1;
 }
+.app-image-language {
+  text-align: center;
+}
 @media screen and (max-width: 640px) {
-  .language-app-image img {
+  .app-image {
+    text-align: center;
+  }
+  .app-image img {
     width: 140px;
+  }
+}
+
+.explain-image {
+  width: 100%;
+  margin: 0 auto;
+}
+.explain-image-earphoneguide,
+.explain-image-gmarc {
+  max-width: 450px;
+}
+.explain-image-online-contents {
+  max-width: 600px;
+}
+.explain-image-onlineshop {
+  border: 1px solid var(--color-border);
+}
+@media screen and (max-width: 640px) {
+  .explain-image-earphoneguide img,
+  .explain-image-gmarc img {
+    height: 100%;
+    object-fit: contain;
+  }
+  .explain-image-earphoneguide {
+    height: 240px;
+  }
+  .explain-image-gmarc {
+    height: 198px;
+  }
+  .explain-image-onlineshop {
+    height: 255px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .explain-image-onlineshop img {
+    object-fit: cover;
+    height: 60%;
+  }
+}
+
+.explain-recommend-list {
+  row-gap: 40px;
+}
+.explain-recommend-item {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.explain-recommend-item:nth-child(1) {
+  background-color: #85B1DF;
+}
+.explain-recommend-item:nth-child(2) {
+  background-color: #93C8FF;
+}
+.explain-recommend-item:nth-child(3) {
+  background-color: #CAE4FF;
+}
+.explain-recommend-item-title {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.75rem;
+  color: var(--color-explain-dark);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.4;
+}
+.explain-recommend-item-title-sub {
+  font-size: 1.25rem;
+  color: var(--color-black);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+  line-height: 1.8;
+}
+@media screen and (max-width: 1144px) {
+  .explain-recommend-list {
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .explain-recommend-list {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .explain-recommend-item-title {
+    font-size: 1.5rem;
+  }
+  .explain-recommend-item-title-sub {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 641px) {
+  .explain-recommend-item .button-with-arrow {
+    font-size: 1.5rem;
+  }
+  .explain-recommend-item .button-with-arrow::after {
+    font-size: 1.75rem;
+  }
+}
+
+.explain-teaser {
+  justify-content: space-between;
+}
+.explain-teaser-button {
+  max-width: none;
+  height: 61px;
+  font-size: 1.25rem;
+  color: var(--color-blue);
+  border-color: var(--color-blue);
+}
+@media screen and (max-width: 375px) {
+  .explain-teaser-button-group {
+    padding-right: 40px;
+    padding-left: 16px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .explain-teaser-button-group {
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+
+.explain-online-contents-list {
+  display: grid;
+  gap: 24px;
+}
+.explain-online-contents-item {
+  background-color: #DAEBFC;
+  padding: 24px;
+  height: 119px;
+  justify-content: center;
+}
+.explain-online-contents-item .title {
+  text-align: left;
+}
+@media screen and (max-width: 640px) {
+  .explain-online-contents-item {
+    height: auto;
+  }
+}
+
+.explain-button-large {
+  max-width: 400px;
+}
+@media screen and (max-width: 375px) {
+  .explain-button-large {
+    padding-right: 40px;
+    padding-left: 16px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .explain-button-large {
+    text-align: center;
+    line-height: 1.2;
+    height: 61px;
+  }
+}
+
+.explain-onlineshop .section-title {
+  text-align: left;
+  color: var(--color-blue);
+  margin-bottom: 16px;
+}
+.explain-onlineshop .section-title-sub {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--color-black);
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+@media screen and (max-width: 640px) {
+  .explain-onlineshop .section-title {
+    font-size: 1.5rem;
   }
 }
