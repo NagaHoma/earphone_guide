@@ -5,6 +5,9 @@
   .xs-only {
     display: block;
   }
+  .xs-none {
+    display: none;
+  }
 }
 
 .overview-title {
@@ -251,7 +254,7 @@
   color: var(--color-blue);
   border-color: var(--color-blue);
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
   .explain-teaser-button-group {
     padding-right: 40px;
     padding-left: 16px;
@@ -287,7 +290,7 @@
 .explain-button-large {
   max-width: 400px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
   .explain-button-large {
     padding-right: 40px;
     padding-left: 16px;

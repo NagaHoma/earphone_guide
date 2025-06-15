@@ -11,7 +11,7 @@ const handleCurrentPage = () => {
   const headerLinks = document.querySelectorAll('.js-handle-current-page a')
   headerLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath) {
+    if (href && currentPath.includes(href)) {
       link.classList.add('header-link-current');
     }
   });
