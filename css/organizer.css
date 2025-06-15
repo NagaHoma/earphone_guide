@@ -161,11 +161,11 @@
   object-fit: contain;
 }
 @media screen and (max-width: 640px) {
-  .organizer-teaser-kabuki .teaser-horizon-image {
+  .organizer-teaser-kabuki .teaser-horizon-img {
     max-width: 200px;
     margin: 0 auto;
   }
-  .organizer-teaser-earphoneguide .teaser-horizon-image {
+  .organizer-teaser-earphoneguide .teaser-horizon-img {
     max-width: 240px;
     margin: 0 auto;
   }
@@ -204,9 +204,10 @@
 }
 @media screen and (max-width: 640px) {
   .organizer-grid-with-image img {
-    border: 1px solid var(--color-border);
     aspect-ratio: 16 / 9;
     object-fit: cover;
+  }
+  .organizer-grid-with-image:not(.organizer-grid-gmarc) img {
     border: none;
   }
   .organizer-grid-with-image li:first-child img {
@@ -271,4 +272,10 @@
   .organizer-eg-g-system {
     flex-direction: column;
   }
+}
+
+.icon-gmarc {
+  width: 240px;
+  height: 100px;
+  margin: 0 auto;
 }

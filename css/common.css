@@ -36,7 +36,7 @@ body {
 }
 body.is-fixed {
   overflow: hidden;
-  height: 100cqi;
+  height: 100dvh;
 }
 p {
   line-height: 1.5;
@@ -794,6 +794,7 @@ p {
 }
 .header-menu-icon span {
   font-size: 2rem;
+  color: var(--color-black)
 }
 .header-menu-sp {
   display: none;
@@ -1416,6 +1417,21 @@ p {
   }
 }
 
+.app-image img {
+  width: 160px;
+  aspect-ratio: 1 / 1;
+}
+.app-image-language {
+  text-align: center;
+}
+@media screen and (max-width: 640px) {
+  .app-image {
+    text-align: center;
+  }
+  .app-image img {
+    width: 140px;
+  }
+}
 
 /* レスポンシブカレンダーのコンテナ */
 .responsive-calendar-container {

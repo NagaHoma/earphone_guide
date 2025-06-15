@@ -23,7 +23,9 @@ const toggleHeaderMenu = (target) => {
   document.body.classList.toggle('is-fixed');
 
   const isOpen = header.classList.contains('is-open');
-  target.textContent = isOpen ? 'close' : 'menu';
+  target.innerHTML = `
+    <span class="material-symbols-outlined">${isOpen ? 'close' : 'menu'}</span>
+  `;
 }
 
 const init = async () => {
@@ -32,7 +34,7 @@ const init = async () => {
   const hamburgerIcon = document.querySelector('.js-toggle-header-menu');
   if(hamburgerIcon) {
     hamburgerIcon.addEventListener('click', (e) => {
-      toggleHeaderMenu(e.target)
+      toggleHeaderMenu(e.currentTarget)
     })
   }
 

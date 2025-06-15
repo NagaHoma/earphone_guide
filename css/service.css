@@ -128,20 +128,9 @@
   }
 }
 
-.app-image img {
-  width: 160px;
-  aspect-ratio: 1 / 1;
-}
-.app-image-language {
-  text-align: center;
-}
-@media screen and (max-width: 640px) {
-  .app-image {
-    text-align: center;
-  }
-  .app-image img {
-    width: 140px;
-  }
+.app-download-button {
+  width: 204px;
+  height: 62px;
 }
 
 .explain-image {
