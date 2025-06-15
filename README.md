@@ -28,3 +28,15 @@
 | ⑧-3 | イヤホンガイドの歴史 | /company/guide_history/ |
 | ⑧-4 | 採用情報 | /company/recruit/ |
 | ⑧-5 | 採用情報（詳細） | /company/recruit/detail.html |
+
+### 6/16納品分（6/23納品分も含む）
+| 番号 | ページ名 | URL |
+| ---- | ---- | ---- |
+| ②-1 | 主催者様・事業者様（公演サポート） | /organizer/ |
+| ②-2 | 主催者様・事業者様（インバウンド対応／バリアフリー対応） | /organizer/special_support/ |
+| ②-3 | 主催者様・事業者様（ご提供可能な機材） | /organizer/device/ |
+| ②-4 | 主催者様・事業者様（公演以外でのサービス） | /organizer/other/ |
+| ④ | 解説付きで伝統芸能を観る | /explain/ |
+| ⑤ | 視覚・聴覚補助付きで舞台を観る | /support/ |
+| ⑥ | 外国語対応があるイベントに行く | /language/ |
+| ⑨ | お問い合わせ | /contact/ |
