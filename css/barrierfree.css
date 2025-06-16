@@ -66,10 +66,10 @@
   color: var(--color-support-dark);
 }
 .service-title-visually-impaired {
-  background-image: url(/image/barrerfree/service-title-visually-impaired.jpg);
+  background-image: url(/image/barrierfree/service-title-visually-impaired.jpg);
 }
 .service-title-hearing-impaired {
-  background-image: url(/image/barrerfree/service-title-hearing-impaired.jpg);
+  background-image: url(/image/barrierfree/service-title-hearing-impaired.jpg);
 }
 .service-title-visually-impaired.service-title {
   /* -webkit-text-stroke: 6px #066686;

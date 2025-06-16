@@ -98,11 +98,11 @@
   }
 }
 
-.organizer-button-barrerfree {
+.organizer-button-barrierfree {
   padding-right: 40px;
 }
 @media screen and (max-width: 640px) {
-  .organizer-button-barrerfree {
+  .organizer-button-barrierfree {
     font-size: 1rem;
     max-width: 240px;
     height: 44px;

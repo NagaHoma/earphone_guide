@@ -984,8 +984,8 @@ p {
   position: relative;
   line-height: 1.2;
 }
-.mv-barrerfree {
-  background-image: url(/image/barrerfree/mv.jpg);
+.mv-barrierfree {
+  background-image: url(/image/barrierfree/mv.jpg);
 }
 .mv-language {
   background-image: url(/image/language/mv.jpg);
@@ -1046,8 +1046,8 @@ p {
   .mv-explain {
     height: 240px;
   }
-  .mv-barrerfree {
-    background-image: url(/image/barrerfree/mv-sp.jpg);
+  .mv-barrierfree {
+    background-image: url(/image/barrierfree/mv-sp.jpg);
   }
   .mv-organizer {
     height: 224px;

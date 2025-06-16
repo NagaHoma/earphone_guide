@@ -6,7 +6,7 @@
 ### 5月納品済み
 | 番号 | ページ名 | URL |
 | ---- | ---- | ---- |
-| ④ | バリアフリー | /barrerfree/ |
+| ④ | バリアフリー | /barrierfree/ |
 
 ### 6/2納品分
 | 番号 | ページ名 | URL |
@@ -23,7 +23,7 @@
 | ④-1 | 解説付きで伝統芸能を観る（カレンダー詳細） | /explain/detail.html |
 | ⑤-1 | 視覚・聴覚補助付きで舞台を観る（カレンダー詳細） | /support/detail.html |
 | ⑥-1 | 外国語対応があるイベントに行く（カレンダー詳細） | /language/detail.html |
-| ⑧ | 会社情報 | /company/ |
+| ⑧ | 会社概要 | /company/ |
 | ⑧-2 | 会社沿革 | /company/company_history/ |
 | ⑧-3 | イヤホンガイドの歴史 | /company/guide_history/ |
 | ⑧-4 | 採用情報 | /company/recruit/ |
