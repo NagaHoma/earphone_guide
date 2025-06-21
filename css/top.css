@@ -498,3 +498,18 @@ p {
     min-width: auto;
   }
 }
+
+.banner-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(221px, 1fr));
+  gap: 40px;
+}
+.banner-item a:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width: 640px) {
+  .banner-list {
+    grid-template-columns: repeat(auto-fit, minmax(156px, 1fr));
+    gap: 8px;
+  }
+}
