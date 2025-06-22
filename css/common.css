@@ -725,49 +725,59 @@ p {
 }
 .header-link-list a:not(.header-contact-button) {
   font-size: 1.125rem;
+  padding-bottom: 8px;
 }
-.header-link-list a:not(.header-contact-button):hover {
-  font-weight: 800;
-}
-.header-link-list a.header-link-current {
+.header-link-list a:not(.header-contact-button):hover,
+.header-link-list a:not(.header-contact-button).header-link-current {
   font-weight: 800;
   color: var(--color-yellow);
-  pointer-events: none;
   position: relative;
 }
-.header-link-list a.header-link-current::after {
+.header-link-list a:not(.header-contact-button).header-link-current {
+  pointer-events: none;
+}
+.header-link-list a:not(.header-contact-button):hover::after,
+.header-link-list a:not(.header-contact-button).header-link-current::after {
   content: "";
   display: block;
   background-color: var(--color-yellow);
   width: 63.5%;
   height: 3px;
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 3px;
 }
+.header-link-list a.link-explain:hover,
 .header-link-list a.header-link-current.link-explain {
   color: var(--color-explain-dark);
 }
+.header-link-list a.link-explain:hover::after,
 .header-link-list a.header-link-current.link-explain::after {
   background-color: var(--color-explain-dark);
 }
+.header-link-list a.link-support:hover,
 .header-link-list a.header-link-current.link-support {
   color: var(--color-support-dark);
 }
+.header-link-list a.link-support:hover::after,
 .header-link-list a.header-link-current.link-support::after {
   background-color: var(--color-support-dark);
 }
+.header-link-list a.link-language:hover,
 .header-link-list a.header-link-current.link-language {
   color: var(--color-language-dark);
 }
+.header-link-list a.link-language:hover::after,
 .header-link-list a.header-link-current.link-language::after {
   background-color: var(--color-language-dark);
 }
+.header-link-list a.link-organizer:hover,
 .header-link-list a.header-link-current.link-organizer {
   color: var(--color-organizer-dark);
 }
+.header-link-list a.link-organizer:hover::after,
 .header-link-list a.header-link-current.link-organizer::after {
   background-color: var(--color-organizer-dark);
 }
