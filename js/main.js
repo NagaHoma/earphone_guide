@@ -14,6 +14,11 @@ const handleCurrentPage = () => {
     if (href && currentPath.includes(href)) {
       link.classList.add('header-link-current');
     }
+
+    // バリアフリーページの場合は/support/のリンクをcurrentに
+    if(currentPath === '/barrierfree/' && href === '/support/') {
+      link.classList.add('header-link-current');
+    }
   });
 }
 
