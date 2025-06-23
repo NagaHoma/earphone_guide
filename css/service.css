@@ -264,7 +264,7 @@
 .explain-online-contents-item {
   background-color: #DAEBFC;
   padding: 24px;
-  height: 119px;
+  min-height: 119px;
   justify-content: center;
 }
 .explain-online-contents-item .title {
