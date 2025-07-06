@@ -1134,6 +1134,7 @@ p {
   font-size: 2rem;
   text-align: left;
   min-width: 1104px;
+  align-items: baseline;
 }
 .page-title-detail-sub {
   font-size: 1.5rem;
