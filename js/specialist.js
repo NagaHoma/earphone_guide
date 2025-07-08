@@ -8,8 +8,6 @@ const createSpecialistList = (column, specialists) => {
   ul.classList.add('specialist-list');
   ul.dataset.column = column;
 
-  console.log(specialists)
-
   specialists.forEach(data => {
     const item = document.createElement("li");
     item.className = "specialist-item gap16";
@@ -57,7 +55,6 @@ const initSpecialists = async () => {
         button.disabled = true;
         return;
       };
-      // console.log(specialists)
 
       button.addEventListener('click', () => {
 
