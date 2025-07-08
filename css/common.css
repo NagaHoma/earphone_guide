@@ -543,6 +543,16 @@ p {
   color: var(--color-black);
   font-size: 1.5rem;
 }
+.button-fit-content {
+  width: fit-content;
+  max-width: none;
+}
+  .button-fit-content.button-blank,
+  .button-fit-content.button-pdf,
+  .button-fit-content.button-audio,
+  .button-fit-content.button-with-arrow {
+  padding-right: 40px;
+}
 @media screen and (max-width: 640px) {
   .button,
   .button-outline {
@@ -557,6 +567,22 @@ p {
   }
   .button-blank::after {
     font-size: 1.25rem;
+  }
+  .button-fit-content {
+    font-size: 1rem;
+    height: 44px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .button-fit-content {
+    line-height: 1;
+  }
+  .button-fit-content.button-blank,
+  .button-fit-content.button-pdf,
+  .button-fit-content.button-audio,
+  .button-fit-content.button-with-arrow {
+    padding-left: 16px;
+    padding-right: 32px;
   }
 }
 
