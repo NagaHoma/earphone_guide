@@ -47,23 +47,23 @@
 
 ### ディレクトリ構成
 ```
-/json/specialists.json      # 解説者データ
-/js/specialist.js           # タブ切替 & 動的表示ロジック
-/image/explain/specialist/  # 解説者の画像ファイル
+/json/specialists.json       //解説者データ
+/js/specialist.js            //タブ切替 & 動的表示ロジック
+/image/explain/specialist/   //解説者の画像ファイル
 ```
 
 ### JSON構成（/json/specialists.json）
 
-```json
+```js
 {
-  "A": [                                   #あ行 *1
+  "A": [                                   //あ行 *1
     {
-      "name": "青木 戸枝",                 #名前
-      "ruby": "あおき ふさえ",             #ルビ
-      "image": "aoki.jpg",                 #画像ファイル名
-      "intro": [...],                      #自己紹介 *2
-      "message": [...],                    #メッセージ *2
-      "audio": "https://vimeo.com/xxxxx"   #音声サンプルURL *3
+      "name": "青木 戸枝",                  //名前
+      "ruby": "あおき ふさえ",               //ルビ
+      "image": "aoki.jpg",                 //画像ファイル名
+      "intro": [...],                      //自己紹介 *2
+      "message": [...],                    //メッセージ *2
+      "audio": "https://vimeo.com/xxxxx"   //音声サンプルURL *3
     }
   ],
   ...
