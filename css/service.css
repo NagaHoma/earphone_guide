@@ -370,9 +370,10 @@
 .specialist-item-contents-title {
   font-weight: bold;
   margin-bottom: 4px;
+  font-size: 1.25rem;
 }
 .specialist-item-contents-text {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .specialist-item-button-wrap {
   flex: 1;
@@ -442,6 +443,7 @@
   font-size: 1.25rem;
   font-weight: 500;
   white-space: nowrap;
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 .specialist-tab-button:hover {
   background-color: var(--color-explain-light);
