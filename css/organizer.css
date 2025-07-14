@@ -230,6 +230,23 @@
   }
 }
 
+
+
+
+@media (min-width: 769px) { 
+  .organizer-grid-gmarc li:nth-child(3) {
+    position: relative; 
+  }
+
+  .organizer-grid-gmarc li:nth-child(4) {
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    text-align: center; 
+  }
+}
+
 .organizer-benefit-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(calc((744px - 32px) / 3), 1fr));
