@@ -547,11 +547,15 @@ p {
   width: fit-content;
   max-width: none;
 }
-  .button-fit-content.button-blank,
-  .button-fit-content.button-pdf,
-  .button-fit-content.button-audio,
-  .button-fit-content.button-with-arrow {
+.button-fit-content.button-with-arrow {
+  padding-left: 24px;
   padding-right: 40px;
+}
+.button-fit-content.button-blank,
+.button-fit-content.button-pdf,
+.button-fit-content.button-audio {
+  padding-left: 24px;
+  padding-right: 56px;
 }
 @media screen and (max-width: 640px) {
   .button,
@@ -571,18 +575,19 @@ p {
   .button-fit-content {
     font-size: 1rem;
     height: 44px;
+    line-height: 1;
   }
 }
 @media screen and (max-width: 374px) {
-  .button-fit-content {
-    line-height: 1;
-  }
-  .button-fit-content.button-blank,
-  .button-fit-content.button-pdf,
-  .button-fit-content.button-audio,
   .button-fit-content.button-with-arrow {
     padding-left: 16px;
     padding-right: 32px;
+  }
+  .button-fit-content.button-blank,
+  .button-fit-content.button-pdf,
+  .button-fit-content.button-audio {
+    padding-left: 16px;
+    padding-right: 44px;
   }
 }
 
@@ -649,8 +654,9 @@ p {
 
 /* list */
 .list li {
-  display: flex;
   line-height: 1.8;
+  text-indent: -1em;
+  padding-left: 1em;
 }
 .list li::before {
   content: '・';
@@ -1151,6 +1157,11 @@ p {
   color: var(--color-gold-deep-dark);
   line-height: 1.4;
 }
+.page-title-sub {
+  font-size: 2rem;
+  display: block;
+  line-height: 1.6;
+}
 .page-title-detail {
   font-size: 2.5rem;
   text-align: left;
@@ -1199,6 +1210,9 @@ p {
   }
   .page-title-en {
     font-size: 1rem;
+  }
+  .page-title-sub {
+    font-size: 1.5rem;
   }
   .page-title-detail {
     font-size: 1.5rem;
