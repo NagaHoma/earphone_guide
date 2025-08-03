@@ -67,11 +67,25 @@ p {
 .pc-only {
   display: inline-block;
 }
+.sp-tab-only {
+  display: none;
+}
+.sp-tab-none {
+  display: inline-block;
+}
 @media screen and (max-width: 640px) {
   .sp-only {
     display: inline-block;
   }
   .pc-only {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sp-tab-only {
+    display: inline-block;
+  }
+  .sp-tab-none {
     display: none;
   }
 }
@@ -333,6 +347,9 @@ p {
 }
 .title-organizer::after {
   background-color: var(--color-organizer-dark);
+}
+.title-gold {
+  color: var(--color-gold-deep-dark);
 }
 .title-medium {
   font-size: 2rem;
@@ -665,6 +682,11 @@ p {
   .list li {
     font-size: 0.875rem;
   }
+}
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 264px);
+  gap: 8px 16px;
 }
 
 /* link-list */
@@ -1419,7 +1441,12 @@ a.text-link:hover {
   font-size: 1.5rem;
   text-align: center;
 }
-.tab-item a {
+.tab-item[data-tab] {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.tab-item a,
+.tab-item[data-tab] {
   display: block;
   padding: 8px 12px;
 }
@@ -1427,6 +1454,7 @@ a.text-link:hover {
   font-weight: 700;
   position: relative;
   padding: 8px 12px;
+  pointer-events: none;
 }
 .tab-item.is-current::after {
   content: "";
@@ -1439,10 +1467,12 @@ a.text-link:hover {
   transform: translateX(-50%);
   border-radius: 3px;
 }
-.tab-list-company .tab-item.is-current {
+.tab-list-company .tab-item.is-current,
+.tab-list-cases .tab-item.is-current {
   color: var(--color-gold-deep-dark);
 }
-.tab-list-company .tab-item.is-current::after {
+.tab-list-company .tab-item.is-current::after,
+.tab-list-cases .tab-item.is-current::after {
   background-color: var(--color-gold-deep-dark);
 }
 .tab-list-organizer .tab-item.is-current {
@@ -1451,10 +1481,14 @@ a.text-link:hover {
 .tab-list-organizer .tab-item.is-current::after {
   background-color: var(--color-organizer-dark);
 }
-.tab-item a:hover {
+.tab-item a:hover,
+.tab-item[data-tab]:hover {
   font-weight: 700;
 }
 .tab-list-organizer br {
+  display: none;
+}
+.tab-panel.hidden {
   display: none;
 }
 @media screen and (max-width: 1144px) {
