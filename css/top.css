@@ -225,11 +225,11 @@ p {
   background-color: var(--color-explain-light);
 }
 .contents-link-support .contents-link-text-side {
-  background-color: var(--color-support-light);
+  background-color: var(--color-support-light2);
   color: var(--color-support-dark);
 }
 .contents-link-support .contents-link-text-side::after {
-  background-color: var(--color-support-light);
+  background-color: var(--color-support-light2);
 }
 .contents-link-language .contents-link-text-side {
   background-color: var(--color-language-light);

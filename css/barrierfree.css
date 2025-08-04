@@ -66,10 +66,12 @@
   color: var(--color-support-dark);
 }
 .service-title-visually-impaired {
-  background-image: url(/image/barrierfree/service-title-visually-impaired.jpg);
+  /*background-image: url(/image/barrierfree/service-title-visually-impaired.jpg);*/
+  background-color: var(--color-support-light2);
 }
 .service-title-hearing-impaired {
-  background-image: url(/image/barrierfree/service-title-hearing-impaired.jpg);
+  /*background-image: url(/image/barrierfree/service-title-hearing-impaired.jpg);*/
+  background-color: var(--color-support-light2);
 }
 .service-title-visually-impaired.service-title {
   /* -webkit-text-stroke: 6px #066686;
@@ -157,7 +159,7 @@
 .recommend-comment {
   display: flex;
   gap: 16px;
-  background-color: #FFEBF2;
+  background-color: #FBDAC8;
   padding: 40px;
   justify-content: space-between;
 }
