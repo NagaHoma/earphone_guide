@@ -66,11 +66,11 @@
   color: var(--color-support-dark);
 }
 .service-title-visually-impaired {
-  /*background-image: url(/image/barrierfree/service-title-visually-impaired.jpg);*/
+  /*background-image: url(/image/organizer/barrierfree/service-title-visually-impaired.jpg);*/
   background-color: var(--color-support-light2);
 }
 .service-title-hearing-impaired {
-  /*background-image: url(/image/barrierfree/service-title-hearing-impaired.jpg);*/
+  /*background-image: url(/image/organizer/barrierfree/service-title-hearing-impaired.jpg);*/
   background-color: var(--color-support-light2);
 }
 .service-title-visually-impaired.service-title {

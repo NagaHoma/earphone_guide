@@ -6,7 +6,7 @@
 ### 5月納品済み
 | 番号 | ページ名 | URL |
 | ---- | ---- | ---- |
-| ④ | バリアフリー | /barrierfree/ |
+| ④ | バリアフリー | /organizer/special_support/barrierfree// |
 
 ### 6/2納品分
 | 番号 | ページ名 | URL |
@@ -54,7 +54,7 @@
 ### 8/3納品分
 | 番号 | ページ名 | URL |
 | ---- | ---- | ---- |
-| - | G-marc公演実績 | /barrierfree/cases/ |
+| - | G-marc公演実績 | /organizer/special_support/barrierfree/cases/ |
 
 <br><br>
 

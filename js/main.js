@@ -8,18 +8,26 @@ const loadInclude = async (id, file) => {
 // currentページの判定
 const handleCurrentPage = () => {
   const currentPath = location.pathname;
-  const headerLinks = document.querySelectorAll('.js-handle-current-page a')
-  headerLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && currentPath.includes(href)) {
-      link.classList.add('header-link-current');
-    }
+  const headerLinks = document.querySelectorAll('.js-handle-current-page a');
+  headerLinks.forEach(link => link.classList.remove('header-link-current'));
 
-    // バリアフリーページの場合は/support/のリンクをcurrentに
-    if(currentPath === '/barrierfree/' && href === '/support/') {
-      link.classList.add('header-link-current');
-    }
-  });
+  const isBarrierfreePage = currentPath.includes('/organizer/special_support/barrierfree/');
+  const isSpecialistPage = currentPath === '/explain/specialist/';
+
+  if(isBarrierfreePage) {
+    const barrierfreeLink = document.querySelector('.js-handle-current-page a[href="/support/"]');
+    barrierfreeLink?.classList.add('header-link-current');
+  } else if(isSpecialistPage) {
+    const specialistLink = document.querySelector('.js-handle-current-page a[href="/explain/specialist/"]');
+    specialistLink?.classList.add('header-link-current');
+  } else {
+    headerLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && currentPath.includes(href)) {
+        link.classList.add('header-link-current');
+      }
+    });
+  }
 }
 
 const toggleHeaderMenu = (target) => {
