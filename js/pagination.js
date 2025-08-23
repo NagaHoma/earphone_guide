@@ -24,6 +24,8 @@ const renderPage = (page) => {
 }
 
 const renderPagination = () => {
+  if (!paginationControls) return;
+
   paginationControls.innerHTML = '';
   const totalPages = Math.ceil(allItems.length / pageSize);
 
